@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/chat", "dest": "api/chat.js" },
+    { "src": "/make", "dest": "api/make.js" },
+    { "src": "/(.*)", "dest": "/public/assistente.html" }
+  ]
+}
